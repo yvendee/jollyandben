@@ -1,0 +1,74 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Invitation and Google Maps Example</title>
+    <style>
+        /* CSS for layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #content {
+            text-align: center;
+            width: 80%;
+            max-width: 800px; /* Adjust max-width as needed */
+            margin: auto;
+        }
+        #invitation-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .location-preview {
+            width: 100%;
+            max-width: 600px; /* Adjust max-width as needed */
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!-- Display invitation image -->
+        <img id="invitation-image" src="{{ invitation_image_path }}" alt="Invitation Image">
+
+        <!-- Church location -->
+        <div class="map-container">
+            <h3>Church Location</h3>
+            <!-- Image preview for church -->
+            <img class="location-preview" src="/static/church_preview.jpg" alt="Church Location Preview">
+            <br>
+            <!-- Link to Google Maps location -->
+            <a href="{{ church_map_link }}" target="_blank">View Church Location on Google Maps</a>
+        </div>
+
+        <br>
+        <br>
+                <br>
+        <br>
+                <br>
+
+
+        <!-- Reception location -->
+        <div class="map-container">
+            <h3>Reception Location</h3>
+            <!-- Image preview for reception -->
+            <img class="location-preview" src="/static/reception_preview.jpg" alt="Reception Location Preview">
+            <br>
+            <!-- Link to Google Maps location -->
+            <a href="{{ reception_map_link }}" target="_blank">View Reception Location on Google Maps</a>
+        </div>
+    </div>
+</body>
+</html>
